@@ -1,0 +1,13 @@
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/mixins";
+
+body {
+  background-color: $bg;
+  margin-top: 28px;
+}
+.todoApp {
+  width: 540px;
+  margin: 0 auto;
+}
