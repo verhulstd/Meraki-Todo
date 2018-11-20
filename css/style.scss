@@ -6,8 +6,56 @@
 body {
   background-color: $bg;
   margin-top: 28px;
+  font-family: $primary-font;
 }
 .todoApp {
   width: 540px;
   margin: 0 auto;
+  &__form {
+    background-color: $green;
+    border-radius: 10px;
+    padding: 19px;
+    position: relative;
+    &__input {
+      display: block;
+      width: 100%;
+      border: 0;
+      height: 65px;
+      background-color: rgba($white, 0.3);
+      padding: 0 75px 0 26px;
+      color: $white;
+      border-radius: 7px;
+      border-top-right-radius: 32.5px;
+      border-bottom-right-radius: 32.5px;
+      transition: all 300ms;
+      &--error {
+        background-color: $red;
+      }
+      &::placeholder {
+        color: $white;
+        font-size: 19px;
+        letter-spacing: 0.5px;
+      }
+    }
+    &__button {
+      position: absolute;
+      right: 19px;
+      top: 19px;
+      width: 65px;
+      height: 65px;
+      background-color: $white;
+      border-radius: 50%;
+      &::after {
+        position: absolute;
+        content: "\e802";
+        font-family: icons;
+        color: $green;
+        font-size: 28px;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -14px;
+      }
+    }
+  }
 }
